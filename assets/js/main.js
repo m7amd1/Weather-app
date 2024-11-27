@@ -24,12 +24,16 @@ weatherForm.addEventListener("submit", async (e) => {
       errorDisplay.textContent = "";
       displayError("");
     } catch (error) {
-      // weatherDisplay.innerHTML = errorDisplay.textContent = error
       console.error(error);
       displayError(error);
     }
   } else {
     displayError("Please Enter a Valid City!");
+    cityDisplay.textContent = "";
+    tempDisplay.textContent = "";
+    humidityDisplay.textContent = "";
+    discDisplay.textContent = "";
+    weatherEmoji.textContent = "";
   }
 });
 

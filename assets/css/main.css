@@ -8,6 +8,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   min-height: 100vh;
   background-image: url("../img/bg.jpg");
   background-position: center;
@@ -17,6 +18,17 @@ body {
   width: 100%;
   backdrop-filter: blur(12px);
 }
+
+.container {
+  padding: 0 15px;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 60px;
+  color: rgb(0, 0, 0);
+}
+
 .weather-container {
   display: flex;
   flex-direction: column;
@@ -85,4 +97,15 @@ body {
   font-weight: bold;
   font-size: 1.3rem;
   color: hsla(0, 0%, 0%, 0.75);
+}
+
+@media (max-width: 428px) {
+  .weather-container {
+    min-width: auto;
+  }
+}
+@media (min-width: 429px) and (max-width: 705px) {
+  .weather-container {
+    min-width: 600px;
+  }
 }
